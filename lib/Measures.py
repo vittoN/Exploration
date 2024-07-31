@@ -124,5 +124,8 @@ def measureDataframe2(df):
     print('Short Equity', df["shortEquity"].iloc[-1])
     measures['ShortEquity'] = df["shortEquity"].iloc[-1]
 
+    numOp = df[df["gain"] != 0].count()['gain']
+    print('Numero di Eseguiti', numOp)
+    
     return measures
 
